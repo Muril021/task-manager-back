@@ -39,7 +39,7 @@ O arquivo TaskController.ts contém a lógica para manipular requisições relac
 - TaskService.ts:
 O arquivo TaskService.ts fornece métodos específicos para manipular operações relacionadas às tarefas. Ele utiliza métodos do TypeORM para interagir com o banco de dados e retorna resultados específicos para o TaskController.
 
-AbstractService.ts
+- AbstractService.ts
 O arquivo AbstractService.ts define uma classe abstrata AbstractService que fornece operações CRUD genéricas. É uma abstração utilizada por TaskService e pode ser estendida para outros serviços.
 
 ---
