@@ -3,6 +3,7 @@ import { AppDataSource } from "../data-source";
 import {
     DeleteResult,
     EntityTarget,
+    FindManyOptions,
     FindOptionsWhere,
     Repository,
     UpdateResult
@@ -17,7 +18,11 @@ abstract class AbstractService<Entity> {
     }
 
     getAll(req: Request): Promise<Entity[]> {
-        return this.repository.find();
+        return this.repository.find({
+            order: {
+                created_at: 'desc',
+            } as object,
+        } as FindManyOptions<Entity>);
     }
 
     create(data: Entity): Promise<Entity> {

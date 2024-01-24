@@ -6,7 +6,13 @@ import Task from '../entities/Task';
 class TaskController {
   async index(req: Request, res: Response) {
     try {
-      return res.status(200).json(await TaskService.getAll(req));
+      const tasksFavorites = await TaskService.getAllTasksFavorites();
+      const tasks = await TaskService.getAllTasksWithoutFavorites();
+
+      return res.status(200).json([
+        ...tasksFavorites,
+        ...tasks,
+      ]);
     } catch ({message}) {
       return res.status(500).json({message});
     }
