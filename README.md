@@ -1,5 +1,5 @@
 # Task Manager Backend
-Este é o repositório do projeto Task Manager Back, um aplicativo de gerenciamento de tarefas desenvolvido em TypeScript utilizando o framework Express e o ORM TypeORM. Abaixo estão as instruções sobre como instalar as bibliotecas necessárias e executar o projeto.
+Este é o backend do projeto Task Manager, desenvolvido em TypeScript utilizando o framework Express e o ORM TypeORM.
 
 ## Instalação
 Certifique-se de ter o Yarn instalado antes de prosseguir.
